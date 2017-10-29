@@ -1,0 +1,119 @@
+/*----------- gallery.css ----------- */
+.gallery {
+list-style-type: none;
+margin:0;
+padding:0;
+overflow: hidden;
+}
+
+.gallery li {
+width: 120px; 
+height: 90px;
+overflow: hidden;
+float: left;
+margin: 0 15px 32px 15px;
+border: none;
+
+   -moz-transition: all 0.1s linear 0s;
+-webkit-transition: all 0.1s linear 0s;
+}
+
+.gallery li:hover {
+   -moz-transform: scale(1.2);
+-webkit-transform: scale(1.2);
+transform: scale3D(1.2,1.2,1);
+z-index: 5;
+}
+
+.gallery li:empty {
+    background: red;
+    height: 0px;
+    margin-bottom: 0;
+}
+
+.gallery li a {
+display: block;
+width: 100%;
+height: 100%;
+}
+
+.gallery li a img {
+position: relative; /* :( disables overflow:hidden in IE7. needs ie7 stylesheet */
+left: -1px;
+top: -1px;
+}
+
+.gallery li a img.tall {
+max-width: 120px;
+}
+
+.gallery li a img.wide {
+max-height: 94px;
+}
+
+/* specific tweaks to photo positions */
+#p-5009dd7c442bf,
+#p-5009dd764a44d,
+#p-5009ddfc154c2
+{ top: -20px; }
+
+
+.mobile-only {
+	display: none;
+}
+
+
+@supports ( flex-wrap:wrap )
+{
+	#content {
+	overflow: visible;
+	}
+	
+	#content:after, section:after {
+	content: " ";
+	display: table;
+	clear: both;
+	*zoom: 1;
+	}
+	
+	.gallery {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		overflow: visible;
+	}
+	.gallery li { float: none; }
+}
+
+
+@media screen and (max-width: 360px)
+{
+	.gallery li {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		width: 50%;
+		height: 150px;
+		margin:0;
+		border: none;
+	}
+	
+
+	.gallery li a {
+    display: block;
+    height: 100%;
+    width: 100%;
+	}
+	
+	.gallery li a img.wide {
+		width: auto;
+		min-height: 100%;
+		position: relative;
+		right: 25%;
+	}
+
+	.gallery li a img.tall {
+		max-width: 100%;
+	}
+
+}

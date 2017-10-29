@@ -1,0 +1,50 @@
+#thumbs.empty {
+display: none;
+}
+
+#thumbs {
+list-style-type: none;
+font-size: 0;
+line-height: 0;
+white-space: nowrap;
+overflow: auto;
+padding:0;
+margin: 0 0 40px 0;
+}
+
+#thumbs li {
+box-sizing: border-box;
+display: inline-block;
+width: 33.333%;
+padding: 2% 2%;
+vertical-align:top;
+}
+
+#thumbs span {
+font-size: 14px;
+line-height: 1em;
+display: block;
+width: 100%;
+white-space: normal;
+text-align: center;
+}
+
+#thumbs img {
+display: block;
+width: 100%;
+border: 0px solid #141413;
+cursor: pointer;
+}
+
+iframe {
+width: 100%;
+min-height: 500px;
+}
+
+@media screen and (max-width:640px)
+{
+	#thumbs{ white-space: normal; }
+	#thumbs li { width: 50%; }
+	#thumbs span { display: none;}
+	iframe {min-height: 0px; }
+}

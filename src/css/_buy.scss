@@ -1,0 +1,43 @@
+.mobile-only {
+	display:none;
+}
+
+.buytext{ font-size: 130%; }
+
+.buylink{ 
+font-size: 120%; 
+width: 50%;
+margin: 0 1em 1.4em;
+text-align: center;
+}
+
+.buylink a {
+text-decoration: none;
+color: #000;
+font-weight: bold;
+background: #eee;
+padding: 8px;
+display: block;
+border-radius: 5px;
+}
+
+@media screen and (max-width: 601px) /* from zero up to 601 wide */
+{
+
+	.mobile-only {
+	display:inherit;
+	}
+	
+	.buytext {
+		text-align: center;
+
+	}
+
+	.buylink {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+}

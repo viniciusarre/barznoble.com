@@ -1,0 +1,318 @@
+html, body {
+margin:0;
+}
+
+@import '_layout';
+
+body {
+background: black;
+font-family: arial;
+font-size: 14px;
+color: #fff;
+overflow-y:scroll;
+}
+
+.bg {
+background: linear-gradient(to bottom, black, black, grey);
+background-size: 1680px;
+top: 0px;
+bottom: 0px;
+left: 0px;
+right: 0px;
+position: fixed;
+z-index: 0;
+transition: 0.9s;
+}
+
+.bg.blurred{
+//	-webkit-filter: blur(3px);
+//	filter: blur(3px);
+}
+
+
+a { color: #8989FF; } /* for links in content */
+
+
+#page {
+transition: 0.5s;
+width: 960px;
+min-height: 100vh;
+margin: auto;
+background: url(img/mic-bw-transparent.gif) 0px 0px no-repeat #b1b0b0;
+background-size: 100%;
+background-position: 0 160px;
+position: relative;
+transition: 0.9s;
+z-index: 1;
+}
+
+#page-bg-overlay {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 700px, #000 800px);
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.blurred {
+//-webkit-filter: blur(6px);
+//filter: blur(6px);
+}
+
+#header {
+position: relative;
+}
+
+#header h1 {
+background: url(img/name-gradient-shadow.png) no-repeat center center hsla(0, 0%, 0%, 0.8);
+background-size: contain;
+margin: 0;
+color: #fff;
+}
+
+#header h1 a {
+display: block; 
+height: 100%;
+text-indent: -9999px;
+}
+
+@import '_nav';
+
+
+#main {
+height: calc( 100vh - 192px );
+}
+
+
+
+#content {
+min-height: 552px;
+box-sizing: border-box;
+padding: 40px;
+display:block;
+line-height: 2em;
+overflow: hidden;
+}
+
+
+section {
+	overflow:hidden;
+	display:none;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.0) 500px, #000 600px);
+}
+
+section h1 { display: none; }
+
+
+
+section:hover {
+
+}
+
+#footer {
+display:none;
+clear: both;
+height: 54px;
+color: #fff;
+background: black;
+}
+
+#social {
+opacity: 0.6;
+overflow: hidden;
+height: 24px;
+list-style-type: none;
+width: 400px;
+margin: 0 auto 0 auto;
+padding:0 0 1em 0;
+position: absolute;
+bottom: 15px;
+left: 40px;
+width: 124px;
+}
+
+#social li {
+height: 32px;
+width: 32px;
+display: inline-block;
+}
+
+#social a {
+display: block;
+width: 100%;
+height: 100%;
+background-image: url(img/social.png);
+background-position: 0 0;
+text-indent: -9999px;
+}
+
+#social a:hover { 
+opacity: 1; 
+-moz-transition: 0.4s;
+-webkit-transition: 0.4s;
+} 
+
+#social #linkTwit{
+margin: 0 4px 0 10px;
+}
+
+#social #linkTwit a { 
+background-position: 0px 63px;
+}
+
+#social #linkRev {
+margin:0;
+}
+#social #linkRev a{
+background-position: 0px 133px;
+}
+
+
+
+
+
+/* -----------------------------  */
+
+h1 {
+font-family: "Trebuchet MS";
+font-weight: normal;
+font-size: 2.2em;
+margin-bottom: 1em;
+}
+
+
+p, table, ul, ol {
+margin-top: 0;
+margin-bottom: 2em;
+}
+
+a img {
+border: none;
+}
+
+/*-------*/
+.col1 {
+float: left;
+width: 48%;
+}
+
+.col2 {
+float: right;
+width: 48%;
+}
+
+
+
+
+
+@media screen and (min-width: 1033px) /* from 1033 and higher - desktop/laptop/tablet */
+{
+	/* social on the side */
+	
+	#social {
+	margin: 0;
+	position: absolute;
+	top: 34px;
+	left: auto; /* yes, necessary */
+	right: -40px;
+	width: 33px;
+	height: 101px;
+	}
+	
+	#social #linkTwit { margin: 8px 0 4px 0; }
+}
+
+
+
+
+
+
+@media screen and (max-width: 601px) /* from zero up to 601 wide */
+{
+
+	.mobile-only {
+		display: initial;
+	}
+	
+	section h1 { display: block; }
+
+
+	a {
+	outline: 0;
+	}
+
+	#page {
+	width: auto;
+	}
+	
+	#header { overflow: visible; }
+
+	#header h1 {
+	height: 65px;
+	-ms-transition: 0.7s;
+-moz-transition: 0.7s;
+-webkit-transition: 0.7s;
+transition: 0.7s;
+	}
+
+	
+	
+
+	#main {
+	width: auto;
+	min-height: 464px;
+	}
+	
+	section {
+	background: linear-gradient(to bottom, transparent 0px, #000 450px)
+	}
+
+	
+	#content { 	padding: 15px; }
+	
+	
+	#nav li a {
+	padding: 0 18px;
+	}
+	
+	#social {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	background: black;
+	height: 32px;
+	width: 100%;
+	text-align: center;
+	padding: 3px 0px;
+	opacity: 0.8;
+	}
+	
+	#social #linkTwit {
+	margin: 0 15%;
+	}
+	#social li {
+	opacity: 0.25;
+	}
+	
+	.col1, .col2 {
+	float: none;
+	width: auto;
+	}
+
+	#page { padding-bottom: 38px; }
+
+
+} /* end @media max width 601px */
+
+
+
+@import '_gallery';
+
+@import '_home';
+
+@import '_news';
+
+@import '_video';
+
+@import '_buy';

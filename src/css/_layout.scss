@@ -1,0 +1,12 @@
+#header h1 {
+height: 134px;
+}
+
+section.js-visible {
+	display:block;
+	min-height: 100%;
+}
+
+section.js-current {
+	opacity:1;
+}

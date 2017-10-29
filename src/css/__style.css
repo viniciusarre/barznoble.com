@@ -1,0 +1,7 @@
+#body{
+    background: black;
+    font-family: arial;
+    font-size: 14px;
+    color: #fff;
+    overflow-y:scroll;
+}
