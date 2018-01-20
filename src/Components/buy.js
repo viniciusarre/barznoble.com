@@ -1,6 +1,8 @@
+
 import React from 'react';
 
 const Buy = () => {
+    document.title = "Barz Noble - Buy";
     return(
         <section className="js-visible">
             <div id="content">
@@ -20,5 +22,5 @@ const Buy = () => {
             </div>
         </section>
     )
-}
+};
 export default Buy;

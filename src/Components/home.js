@@ -6,6 +6,10 @@ import '../css/_home.scss';
 
 export default class Home extends Component{
 
+    componentDidMount() {
+        document.title = "Barz Noble - Welcome";
+    }
+
     render(){
         return(
             <section id="sect-home" className="js-visible">

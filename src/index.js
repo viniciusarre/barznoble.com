@@ -6,23 +6,25 @@ import {Route,BrowserRouter,Switch} from 'react-router-dom';
 import './css/_bio.scss';
 import './css/_buy.scss';
 import './css/_gallery.scss';
-import './css/__style.css';
+import './css/style.scss';
 
 import './css/_layout.scss';
 import './css/_nav.scss';
 import './css/_news.scss';
 import './css/_video.scss';
-import './css/style.scss';
 
-/*Components*/
-import Header from "./Components/header";
-import Home from "./Components/home";
-// import News from "./Components/news";
-import Listen from './Components/listen';
-import Buy from './Components/buy';
-import FetchBio from "./Components/fetchBio";
-import About from "./Components/about";
-import FetchNews from "./Components/FetchNews";
+/*oldComponents*/
+import Header from "./Components/Header";
+import Home from "./Components/Home";
+import Listen from './Containers/Listen';
+import Buy from './Components/Buy';
+import Bio from "./Containers/Bio";
+import About from "./Components/About";
+import Gallery from "./oldComponents/gallery";
+import Video from "./Containers/Video";
+import News from "./Containers/News";
+
+
 
 ReactDOM.render(
             <BrowserRouter>
@@ -33,11 +35,13 @@ ReactDOM.render(
                         <div id="main">
                             <Switch>
                                 <Route exact path="/" component={Home}></Route>
-                                <Route exact path="/news/" component={FetchNews}></Route>
+                                <Route exact path="/news/" component={News}></Route>
                                 <Route exact path="/listen" component={Listen}></Route>
                                 <Route exact path="/buy" component={Buy}></Route>
-                                <Route exact path="/bio" component={FetchBio}></Route>
+                                <Route exact path="/bio" component={Bio}></Route>
                                 <Route exact path="/album" component={About}></Route>
+                                <Route exact path="/photos" component={Gallery}></Route>
+                                <Route exact path="/videos" component={Video}></Route>
                             </Switch>
                         </div>
                         <div id="footer">

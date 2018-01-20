@@ -2,12 +2,18 @@ import React from 'react';
 import '../css/style.css';
 
 
-const About = () =>{
+
+const About = () => {
+    //changing de document's title
+    document.title = "Barz Noble - Album";
+
     return(
         <section id="about" className="js-visible">
             <div id="content">
                 <h1>About The Album</h1>
                 <div className="col1">
+                    {/*<p> rendering the text*/}
+
                     <p>
                         The upcoming freshman solo release “Symphonic Signatures” the debut album
                         from the artist Barz Noble was produced, recorded, and mixed by Zoltan
@@ -43,4 +49,5 @@ const About = () =>{
     )
 }
 
-export default About;
+
+export default About; //exporting it for using in other pages as a single component
