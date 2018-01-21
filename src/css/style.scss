@@ -48,7 +48,7 @@ z-index: 1;
 
 #page-bg-overlay {
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 700px, #000 800px);
-	height: 100vh;
+	min-height: 100%;
 	width: 100%;
 	position: absolute;
 	top: 0;
@@ -81,7 +81,7 @@ text-indent: -9999px;
 
 
 #main {
-height: calc( 100vh - 192px );
+min-height: calc( 100vh - 192px );
 }
 
 
@@ -99,16 +99,11 @@ overflow: hidden;
 section {
 	overflow:hidden;
 	display:none;
-	background: linear-gradient(to bottom, rgba(0,0,0,0.0) 500px, #000 600px);
 }
 
 section h1 { display: none; }
 
 
-
-section:hover {
-
-}
 
 #footer {
 display:none;
@@ -146,12 +141,6 @@ background-image: url(img/social.png);
 background-position: 0 0;
 text-indent: -9999px;
 }
-
-#social a:hover { 
-opacity: 1; 
--moz-transition: 0.4s;
--webkit-transition: 0.4s;
-} 
 
 #social #linkTwit{
 margin: 0 4px 0 10px;
@@ -256,12 +245,8 @@ width: 48%;
 transition: 0.7s;
 	}
 
-
-
 	
-
-
-
+	
 
 	#main {
 	width: auto;
@@ -269,7 +254,7 @@ transition: 0.7s;
 	}
 	
 	section {
-	background: linear-gradient(to bottom, transparent 0px, #000 450px)
+	
 	}
 
 	

@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import axios from 'axios';
+import cachios from 'cachios';
 import Bio from '../Components/Bio';
 
 export default class FetchBio extends Component {
@@ -11,7 +11,7 @@ export default class FetchBio extends Component {
      Fetch() {
         let post = 1;
         let url = 'https://public-api.wordpress.com/rest/v1/sites/barznoble.wordpress.com/posts/' + post + '/?context=display';
-        axios.get(url)
+        cachios.get(url,{ttl:900})
             .then(result =>this.setState({data:result.data.content}))
             .catch(error =>console.log("Error: " + error));
     }
@@ -21,7 +21,6 @@ export default class FetchBio extends Component {
     }
 
     render() {
-        {console.log(this.state.data)}
         return(<Bio content = {this.state.data}/>)
     }
 }

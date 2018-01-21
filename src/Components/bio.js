@@ -1,10 +1,9 @@
 import React from 'react';
 
-import '../css/link.css';
 import '../css/style.scss';
 import '../css/_bio.scss';
 import Img from '../img/biopic.jpg';
-
+import '../css/img_float.css';
 
 const Bio = ({content}) => {
 
@@ -12,7 +11,7 @@ const Bio = ({content}) => {
         <section className="js-visible">
             <div id="content">
                 <div className="col1">
-                    <div className={"float"} dangerouslySetInnerHTML={{ __html:content}}></div>
+                    {typeof(content)==="string" && (<div className={"floatEmbedded"} dangerouslySetInnerHTML={{ __html:content}}></div>)}
 
                     {/*Renders the props.content*/}
 
@@ -20,9 +19,7 @@ const Bio = ({content}) => {
                 </div>
             <div className="col2">
                <img src={Img} alt="Profile"/>
-
-                {/*gets the image link*/}
-            </div>
+            </div>      {/*gets the image link*/}
         </div>
     </section>
         )

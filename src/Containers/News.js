@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+import cachios from 'cachios';
 import MapNews from "../Containers/MapNews";
-import '../css/_news.scss';
+import '../css/style.css'
 
 export default class FetchNews extends Component {
     constructor() {
@@ -10,7 +10,7 @@ export default class FetchNews extends Component {
     }
     fetchNews() {
         let url = 'https://public-api.wordpress.com/rest/v1/sites/barznoble.wordpress.com/posts/?context=display';
-        axios.get(url)
+        cachios.get(url,{ttl:900})
             .then(response => {
                 this.setState({news: response.data.posts});
             })

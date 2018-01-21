@@ -20,7 +20,7 @@ import Listen from './Containers/Listen';
 import Buy from './Components/Buy';
 import Bio from "./Containers/Bio";
 import About from "./Components/About";
-import Gallery from "./oldComponents/gallery";
+import Gallery from "./Components/Gallery";
 import Video from "./Containers/Video";
 import News from "./Containers/News";
 
@@ -42,6 +42,7 @@ ReactDOM.render(
                                 <Route exact path="/album" component={About}></Route>
                                 <Route exact path="/photos" component={Gallery}></Route>
                                 <Route exact path="/videos" component={Video}></Route>
+                                <Route exact path="/photos" component={Gallery}></Route>
                             </Switch>
                         </div>
                         <div id="footer">

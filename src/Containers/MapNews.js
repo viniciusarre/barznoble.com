@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Closed, Opened} from "../Components/Boxes";
-
+import '../css/style.css';
 
 export default class MapNews extends Component{
     constructor(){

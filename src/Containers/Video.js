@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+import cachios from 'cachios';
 import YouTube from 'react-youtube';
 
 
@@ -19,10 +19,9 @@ export default class FetchVideoData extends Component{
 
 
     getData(){
-        axios.get("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLLR3cVv55vsn6qxQ3Llsvp_Y4V8B92lwy&key=AIzaSyBImwfn6loeCIEJWi9uJysL9lxaJhS3EzI")
+        cachios.get("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLLR3cVv55vsn6qxQ3Llsvp_Y4V8B92lwy&key=AIzaSyBImwfn6loeCIEJWi9uJysL9lxaJhS3EzI",{ttl:900})
             .then(result=>{
                 this.setState({data:result.data});
-                console.log(this.state.data.items[0].snippet.resourceId)
                 this.sortData()
             })
             .catch(error=>{
@@ -32,8 +31,8 @@ export default class FetchVideoData extends Component{
 
     sortData(){
         let items = this.state.data.items;
-        let imgURL = [], vID = [], txt = []
-        items.forEach(function(elem, ind){
+        let imgURL = [], vID = [], txt = [];
+        items.forEach(function(elem){
             imgURL.push(elem.snippet.thumbnails.high.url);
             vID.push(elem.snippet.resourceId.videoId);
             txt.push(elem.snippet.title);
