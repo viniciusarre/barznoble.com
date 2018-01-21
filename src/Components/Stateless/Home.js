@@ -1,18 +1,17 @@
 import React, {Component} from 'react';
 
-import '../css/style.css'
-import '../css/_home.scss';
+import '../../css/style.css';
 
 
 export default class Home extends Component{
 
     componentDidMount() {
-        document.title = "Barz Noble - Welcome";
+        document.title = "Barz Noble - Welcome"; //when the component mounts, the document's title changes
     }
 
     render(){
         return(
-            <section id="sect-home" className="js-visible">
+            <section id="sect-home" className="js-visible default">
                 <div className="home-panel">
                     <title>Welcome</title>
                     <div className="home-content">

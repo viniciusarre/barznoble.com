@@ -1,0 +1,123 @@
+/*main animation classes...*/
+.default{
+    animation:fadeout 2s, fadein 2s;
+    -moz-animation: fadeout 2s, fadein 2s; /* Firefox */
+    -webkit-animation: fadeout 2s, fadein 2s; /* Safari and Chrome */
+    -o-animation: fadeout 2s, fadein 2s; /* Opera */
+}
+
+.home{
+    animation:fadein 2s;
+    -moz-animation: fadeout 2s, fadein 2s; /* Firefox */
+    -webkit-animation: fadeout 2s, fadein 2s; /* Safari and Chrome */
+    -o-animation: fadeout 2s, fadein 2s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.unmount {
+    animation: fadeout 10s;
+    -moz-animation: fadeout 10s; /* Firefox */
+    -webkit-animation: fadeout 10s; /* Safari and Chrome */
+    -o-animation: fadeout 10s; /* Opera */
+}
+
+@keyframes fadeout{
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0.5;
+    }
+}
+@-moz-keyframes fadeout { /* Firefox */
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0.5;
+    }
+}
+@-webkit-keyframes fadeout { /* Safari and Chrome */
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0.5;
+    }
+}
+@-o-keyframes fadeout { /* Opera */
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0.5;
+    }
+}
+
+
+
+/*****************************************************news box animation**************************************************/
+
+
+
+.animateIn {
+    animation: accordionIn 0.45s normal ease-in-out both 1;
+}
+.animateOut {
+    animation: accordionOut 0.45s alternate ease-in-out both 1;
+}
+@keyframes accordionIn {
+    0% {
+        opacity: 0;
+        transform:scale(0.9) rotateX(-60deg);
+        transform-origin: 50% 0;
+    }
+    100% {
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes accordionOut {
+    0% {
+        opacity: 1;
+        transform:scale(1);
+    }
+    100% {
+        opacity:0;
+        transform:scale(0.9) rotateX(-60deg);
+    }
+}

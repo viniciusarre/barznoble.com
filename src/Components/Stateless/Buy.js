@@ -1,10 +1,12 @@
 
-import React from 'react';
-
+import React from 'react';//imports React
+//other component
 const Buy = () => {
-    document.title = "Barz Noble - Buy";
+    document.title = "Barz Noble - Buy"; //changes the title...
+
+    //renders the content of the page...
     return(
-        <section className="js-visible">
+        <section className="js-visible default">
             <div id="content">
                 <h1>Buy Music</h1>
                 <div className="col1">
@@ -23,4 +25,4 @@ const Buy = () => {
         </section>
     )
 };
-export default Buy;
+export default Buy; //exports it...

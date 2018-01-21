@@ -51,8 +51,9 @@ export default class FetchVideoData extends Component{
 
     render(){
         return (
-            <section id="sect-videos" className="js-visible">
+            <section id="sect-videos" className="js-visible default">
                 <div id="content">
+                    <h1>Videos</h1>
                     <ul id="thumbs">{this.state.text.map((elem,ind)=><li key={ind}><img onClick={()=>this.setVideo(ind)} src={this.state.imageURL[ind]} alt={"thumbnail"}/><span>{elem}</span></li>)}</ul>
                     <div>
                         <YouTube videoId={this.state.currentID}/>

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
-import '../css/style.css';
+import '../../css/style.css';
 
 export default class Header extends Component{
 
@@ -14,7 +14,8 @@ export default class Header extends Component{
             <div id="header">
                 <h1><Link to="/">Barz Noble</Link></h1>
                 <ul id="nav" className={this.state.mobileOpen?"open":""}>
-                    <div onClick={()=>this.setState({mobileOpen:!this.state.mobileOpen})}><li className="mobile-only" id="menutoggle">Menu</li>
+                    <div onClick={()=>this.setState({mobileOpen:!this.state.mobileOpen})}>
+                        <li className="mobile-only" id="menutoggle">Menu</li>
                         <li><Link to="/listen">Listen</Link></li>
                         <li><Link to="/bio">Bio</Link></li>
                         <li><Link to="/news">News</Link></li>

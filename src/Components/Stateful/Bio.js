@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import cachios from 'cachios';
-import Bio from '../Components/Bio';
+import Bio from '../Stateless/Bio';
 
 export default class FetchBio extends Component {
     constructor(){

@@ -1,18 +1,22 @@
-import React from 'react';
-import '../css/style.css';
+import React from 'react';//importing react
+import '../../css/style.css';//importing css
 
 
-
+//another stateless component...
 const About = () => {
     //changing de document's title
     document.title = "Barz Noble - Album";
 
     return(
-        <section id="about" className="js-visible">
+
+        <section id="about" className="js-visible default">
             <div id="content">
                 <h1>About The Album</h1>
                 <div className="col1">
-                    {/*<p> rendering the text*/}
+                    {/*rendering the text with JSX... it looks like html, but there are some other differences...
+                                    https://jsx.github.io/
+
+                    */}
 
                     <p>
                         The upcoming freshman solo release “Symphonic Signatures” the debut album
@@ -47,7 +51,7 @@ const About = () => {
             </div>
         </section>
     )
-}
+};
 
 
 export default About; //exporting it for using in other pages as a single component

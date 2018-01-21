@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Lightbox from 'react-image-lightbox';
 
-import '../css/object.css';
-import '../css/_gallery.scss';
+import '../../css/object.css';
+import '../../css/style.css';
 
 
 const img  =["3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg",
@@ -36,13 +36,15 @@ const img  =["3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.
     render(){
         const {isOpen} = this.state;
         return(
-        <section id="sect-gallery" className="js-visible">
-            <div id={"content"}>
-                <ul className="gallery fit">
+        <section id="sect-gallery" className="js-visible default">
+            <div id="content">
+                <h1>Photos</h1>
+                <ul className="gallery">
                     {img.map((elem,ind) =>
-                    <li className={"lightbox"}>
-                        <div onClick={()=>this.openGallery(ind)}>
-                           <img src={"img/gallery/thumb/"+elem} alt={"gallery item"}></img>
+                    <li className="lightbox" key={ind}>
+                        <div onClick={()=>this.openGallery(ind)} className={"fit"}
+                        >
+                           <img src={"img/gallery/thumb/"+elem} alt={"gallery item"} ></img>
                         </div>
                     </li>
                     )}<li></li><li></li><li></li><li></li><li></li><li></li>
