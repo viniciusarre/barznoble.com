@@ -1,3 +1,7 @@
+# Barz Noble 
+
+## How to get the project working
+
 This is the react refactor for the barznoble website. It was built with create-react-app and some other npm dependencies. 
 To get started, please, clone the project and browse to its folder using the terminal and then run 
 [npm install]
